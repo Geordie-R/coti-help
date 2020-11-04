@@ -1,7 +1,11 @@
 # Assuming youve tried to run the wolf install script.  Try this to download the clusterstamp again.
 
+#Stop cnode service
+systemctl stop cnode.service
+#clear the log
 > /home/coti/coti-fullnode/logs/FullNode1.log
 
+#download the clusterstamp
 FILE=/home/coti/coti-fullnode/FullNode1_clusterstamp.csv
 if [ -f "$FILE" ]; then
     echo "$FILE already exists, no need to download"
@@ -17,7 +21,6 @@ chgrp FullNode1_clusterstamp.csv
 sudo -u coti mvn initialize && sudo -u coti mvn clean compile && sudo -u coti mvn -Dmaven.test.skip=true package
 
 
-systemctl stop cnode.service
 systemctl daemon-reload
 systemctl enable cnode.service
 systemctl start cnode.service
