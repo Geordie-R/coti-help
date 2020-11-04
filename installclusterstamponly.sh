@@ -9,8 +9,8 @@ fi
 
 
 cd /home/coti/coti-fullnode/
-chown FullNode1_clusterstamp.csv
-chgrp FullNode1_clusterstamp.csv
+chown coti FullNode1_clusterstamp.csv
+chgrp coti FullNode1_clusterstamp.csv
 
 
 
