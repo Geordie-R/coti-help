@@ -1,5 +1,7 @@
 # Assuming youve tried to run the wolf install script.  Try this to download the clusterstamp again.
 
+> /home/coti/coti-fullnode/logs/FullNode1.log
+
 FILE=/home/coti/coti-fullnode/FullNode1_clusterstamp.csv
 if [ -f "$FILE" ]; then
     echo "$FILE already exists, no need to download"
